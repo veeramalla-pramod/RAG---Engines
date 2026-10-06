@@ -1,0 +1,44 @@
+# Operating Systems & CPU Scheduling Study Notes
+
+## 1. Introduction to CPU Scheduling
+CPU scheduling is the basis of multiprogrammed operating systems. By switching the CPU among processes, the operating system makes the computer more productive. In a uniprocessor system, only one process can run at a time; others must wait until the CPU is free and can be rescheduled. The objective of multiprogramming is to have some process running at all times, maximizing CPU utilization.
+
+## 2. Scheduling Criteria and Metrics
+Different CPU scheduling algorithms have different properties, and the choice of a particular algorithm may favor one class of processes over another. Common criteria include:
+- CPU Utilization: Keep the CPU as busy as possible (ranging from 40% to 90%).
+- Throughput: The number of processes completed per unit time.
+- Turnaround Time: The interval from the time of submission of a process to the time of its completion.
+- Waiting Time: The sum of the periods spent waiting in the ready queue.
+- Response Time: The time from the submission of a request until the first response is produced.
+
+## 3. First-Come, First-Served (FCFS) Scheduling
+First-Come, First-Served (FCFS) is the simplest CPU scheduling algorithm. The process that requests the CPU first is allocated the CPU first. The implementation of FCFS is easily managed with a FIFO queue. When a process enters the ready queue, its Process Control Block (PCB) is linked onto the tail of the queue.
+
+A major drawback of FCFS scheduling is the convoy effect. The convoy effect occurs when a heavy, CPU-bound process holds the CPU for a long burst time, causing all subsequent shorter, I/O-bound processes to queue up behind it in the ready queue. This results in significantly lower CPU and device utilization, as all short processes wait for the single long process to finish before they can execute and request I/O operations. The average waiting time under FCFS is often quite long and varies substantially depending on process arrival order.
+
+## 4. Shortest-Job-First (SJF) Scheduling
+Shortest-Job-First (SJF) associates with each process the length of its next CPU burst. When the CPU is available, it is assigned to the process that has the smallest next CPU burst. If the next CPU bursts of two processes are the same, FCFS scheduling is used to break the tie.
+
+SJF is provably optimal because it gives the minimum average waiting time for a given set of processes. However, its primary practical difficulty is knowing the length of the next CPU burst in advance. In long-term scheduling, users may specify process limits, but for short-term CPU scheduling, the operating system must predict the burst length using exponential smoothing: tau_{n+1} = alpha * t_n + (1 - alpha) * tau_n.
+
+A critical vulnerability of SJF is process starvation: long CPU-burst processes may wait indefinitely if shorter processes arrive continuously.
+
+## 5. Round Robin (RR) Scheduling
+The Round Robin (RR) scheduling algorithm is designed especially for time-sharing systems. A small unit of time, called a time quantum or time slice (typically 10 to 100 milliseconds), is defined. The ready queue is treated as a circular FIFO queue. The CPU scheduler goes around the ready queue, allocating the CPU to each process for a time interval of up to 1 time quantum.
+
+If the process has a CPU burst shorter than the time quantum, it releases the CPU voluntarily. If its CPU burst exceeds the quantum, a timer interrupt fires, triggering a context switch that places the running process at the tail of the ready queue.
+
+The performance of Round Robin heavily depends on the size of the time quantum:
+- If the time quantum is extremely large, RR degrades to FCFS.
+- If the time quantum is too small, excessive context switching overhead degrades overall system throughput.
+Rule of thumb: 80 percent of the CPU bursts should be shorter than the time quantum.
+
+## 6. Priority Scheduling
+In Priority Scheduling, a priority is associated with each process, and the CPU is allocated to the process with the highest priority (equal-priority processes are scheduled in FCFS order). Priorities can be defined internally (using metrics like memory requirements, open file count, ratio of average I/O burst to CPU burst) or externally (business importance, payment tier).
+
+A major issue with priority scheduling algorithms is indefinite blocking or starvation, where a low-priority process never gets CPU execution because higher-priority processes keep arriving. The standard solution is aging: gradually increasing the priority of processes that wait in the system for a long duration.
+
+## 7. Multilevel Queue and Feedback Queue Scheduling
+Multilevel Queue scheduling partitions the ready queue into several separate queues based on process type (for example, foreground interactive processes versus background batch processes). Each queue has its own scheduling algorithm.
+
+Multilevel Feedback Queue scheduling allows a process to move between queues. If a process uses too much CPU time, it is demoted to a lower-priority queue. If a process waits too long in a lower queue, it is aged and promoted to a higher-priority queue. This dynamic approach prevents starvation while prioritizing interactive I/O bursts.

@@ -1,0 +1,31 @@
+# ApexGear Direct - Store Policies & Product Specifications
+
+## 1. General Return and Refund Policy
+- Return Window: Customers may request a return within exactly 15 calendar days from the verified date of carrier delivery.
+- Eligibility Conditions: Items must be in brand-new, unused condition, with all original tags attached and in original packaging. Proof of purchase (Order ID or receipt) is required.
+- Late Returns: Return requests submitted after 15 calendar days from delivery are strictly non-refundable and will be rejected. No exceptions or store credits are granted for late return requests.
+- Refund Processing: Approved refunds are credited to the original payment method within 5 to 7 business days following warehouse inspection. A flat $4.50 restocking fee applies to non-defective remorse returns.
+
+## 2. Product Warranty & Coverage
+- Warranty Duration: ApexGear provides a 1-Year Limited Manufacturer Warranty on all electronic devices, bags, and tactical gear from the date of initial purchase.
+- Covered Defects: Hardware malfunctions, seam tears, broken zipper teeth, defective buckles, and internal wiring failures resulting from normal, intended use.
+- Exclusions: The warranty explicitly does not cover damage caused by accidents, water immersion beyond rated IPX standards, cosmetic wear and tear, animal damage, or unauthorized modifications and repairs.
+- Claims Procedure: Customers must provide digital photos of the defect, serial number, and order receipt to warranty@apexgear.example.com.
+
+## 3. Shipping Options & Delivery Windows
+- Standard Ground Shipping: 3 to 5 business days transit time. Cost is $5.99; complimentary free shipping applies to domestic orders exceeding $50.00 pre-tax.
+- Expedited Air Shipping: 2 business days transit time. Fixed flat fee of $14.99 nationwide.
+- Priority Overnight: Guaranteed next-business-day delivery by 3:00 PM local time for orders placed before 1:00 PM EST. Cost is $29.99.
+- International Delivery: Currently available only to Canada and the United Kingdom. Customs duties, taxes, and import fees are the sole responsibility of the recipient.
+
+## 4. Price Match Guarantee
+- ApexGear matches the advertised price of identical in-stock items from certified authorized retailers within 7 days of purchase.
+- The item must share identical SKU, color, and model year. Clearance, liquidation, refurbished, open-box, and auction listings are ineligible for price matching.
+
+## 5. Featured Product Specifications: Apex Sentinel Pro 30L Backpack
+- Model: Apex Sentinel Pro 30L Daypack & Travel Pack.
+- Retail Price: $129.99 USD.
+- Capacity & Dimensions: 30 Liters total volume; dimensions measure 20.5 in x 12.2 in x 8.0 in (52 cm x 31 cm x 20 cm); empty weight is 2.4 lbs (1.09 kg).
+- Materials: 840D Ballistic Cordura Nylon with DWR water-resistant coating and YKK AquaGuard weatherproof zippers.
+- Compartments: Padded laptop sleeve fits up to 16-inch laptops, dedicated fleece-lined tablet pocket, concealed passport pocket, dual expandable side water bottle pockets.
+- Backpack Return Policy: The Sentinel Pro Backpack is subject to the standard 15-day return policy. It cannot be returned or refunded after 20 days or once field tags are removed.
